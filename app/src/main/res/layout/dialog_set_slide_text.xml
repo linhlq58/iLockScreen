@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="match_parent"
+    android:background="@drawable/dialog_ios_shape"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:text="@string/set_slide_text"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/edit_slide_text"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/edittext_shape"
+        android:maxLength="20"
+        android:paddingLeft="10dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/borderColor"></View>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <TextView
+            android:id="@+id/ok_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/divider1"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="OK"
+            android:textColor="@color/iOSTextColor" />
+
+        <View
+            android:id="@+id/divider1"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:background="@color/borderColor"></View>
+
+        <TextView
+            android:id="@+id/cancel_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/divider1"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="@string/cancel"
+            android:textColor="@color/iOSTextColor" />
+
+    </RelativeLayout>
+
+</LinearLayout>

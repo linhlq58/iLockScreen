@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/unlock_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/shadow_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBlackTransparent2"
+        android:visibility="gone"></View>
+
+    <com.tetstudio.ilockscreen.utils.iOSTextView
+        android:id="@+id/enter_password_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="@string/enter_password"
+        android:textColor="@android:color/white" />
+
+    <RelativeLayout
+        android:id="@+id/viewPagerIndicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/enter_password_text"
+        android:layout_centerHorizontal="true">
+
+        <LinearLayout
+            android:id="@+id/viewPagerCountDots"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal" />
+    </RelativeLayout>
+
+    <!--<TextView
+        android:id="@+id/password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/enter_password_text"
+        android:layout_centerHorizontal="true"
+        android:inputType="numberPassword"
+        android:maxLength="4"
+        android:textColor="@android:color/white"
+        android:textSize="50sp" />-->
+
+    <com.tetstudio.ilockscreen.utils.iOSTextView
+        android:id="@+id/incorrect_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/viewPagerIndicator"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="@string/incorrect_pass"
+        android:textColor="@android:color/white"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <LinearLayout
+            android:id="@+id/first_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/no_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:background="@drawable/number_shape">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical">
+
+                    <com.tetstudio.ilockscreen.utils.iOSTextView
+                        android:id="@+id/no_1_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="-4dp"
+                        android:text="1"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/number_size" />
+
+                    <com.tetstudio.ilockscreen.utils.iOSTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text=" "
+                        android:textColor="@android:color/white"
+                        android:textSize="10sp" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/no_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:background="@drawable/number_shape">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical">
+
+                    <com.tetstudio.ilockscreen.utils.iOSTextView
+                        android:id="@+id/no_2_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="-4dp"
+                        android:text="2"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/number_size" />
+
+                    <com.tetstudio.ilockscreen.utils.iOSTextView
+                        android:id="@+id/no_2_char"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="A B C"
+                        android:textColor="@android:color/white"
+                        android:textSize="10sp" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/no_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:background="@drawable/number_shape">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical">
+
+                    <com.tetstudio.ilockscreen.utils.iOSTextView
+                        android:id="@+id/no_3_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="-4dp"
+                        android:text="3"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/number_size" />
+
+                    <com.tetstudio.ilockscreen.utils.iOSTextView
+                        android:id="@+id/no_3_char"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="D E F"
+                        android:textColor="@android:color/white"
+                        android:textSize="10sp" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/second_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/first_row"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/no_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:background="@drawable/number_shape">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical">
+
+                    <com.tetstudio.ilockscreen.utils.iOSTextView
+                        android:id="@+id/no_4_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="-4dp"
+                        android:text="4"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/number_size" />
+
+                    <com.tetstudio.ilockscreen.utils.iOSTextView
+                        android:id="@+id/no_4_char"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="G H I"
+                        android:textColor="@android:color/white"
+                        android:textSize="10sp" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/no_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:background="@drawable/number_shape">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical">
+
+                    <com.tetstudio.ilockscreen.utils.iOSTextView
+                        android:id="@+id/no_5_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="-4dp"
+                        android:text="5"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/number_size" />
+
+                    <com.tetstudio.ilockscreen.utils.iOSTextView
+                        android:id="@+id/no_5_char"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="J K L"
+                        android:textColor="@android:color/white"
+                        android:textSize="10sp" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/no_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:background="@drawable/number_shape">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical">
+
+                    <com.tetstudio.ilockscreen.utils.iOSTextView
+                        android:id="@+id/no_6_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="-4dp"
+                        android:text="6"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/number_size" />
+
+                    <com.tetstudio.ilockscreen.utils.iOSTextView
+                        android:id="@+id/no_6_char"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="M N O"
+                        android:textColor="@android:color/white"
+                        android:textSize="10sp" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/third_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/second_row"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/no_7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:background="@drawable/number_shape">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical">
+
+                    <com.tetstudio.ilockscreen.utils.iOSTextView
+                        android:id="@+id/no_7_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="-4dp"
+                        android:text="7"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/number_size" />
+
+                    <com.tetstudio.ilockscreen.utils.iOSTextView
+                        android:id="@+id/no_7_char"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="P Q R S"
+                        android:textColor="@android:color/white"
+                        android:textSize="10sp" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/no_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:background="@drawable/number_shape">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical">
+
+                    <com.tetstudio.ilockscreen.utils.iOSTextView
+                        android:id="@+id/no_8_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="-4dp"
+                        android:text="8"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/number_size" />
+
+                    <com.tetstudio.ilockscreen.utils.iOSTextView
+                        android:id="@+id/no_8_char"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="T U V"
+                        android:textColor="@android:color/white"
+                        android:textSize="10sp" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/no_9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:background="@drawable/number_shape">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical">
+
+                    <com.tetstudio.ilockscreen.utils.iOSTextView
+                        android:id="@+id/no_9_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="-4dp"
+                        android:text="9"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/number_size" />
+
+                    <com.tetstudio.ilockscreen.utils.iOSTextView
+                        android:id="@+id/no_9_char"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="W X Y Z"
+                        android:textColor="@android:color/white"
+                        android:textSize="10sp" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/last_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/third_row"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.tetstudio.ilockscreen.utils.iOSTextView
+                android:id="@+id/no_0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="12dp"
+                android:background="@drawable/number_shape"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@android:color/white"
+                android:textSize="22sp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <com.tetstudio.ilockscreen.utils.iOSTextView
+        android:id="@+id/delete_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="20dp"
+        android:text="@string/delete_text"
+        android:textColor="@android:color/white"
+        android:textSize="20sp" />
+
+    <com.tetstudio.ilockscreen.utils.iOSTextView
+        android:id="@+id/emergency_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="@string/emergency_text"
+        android:textColor="@android:color/white"
+        android:textSize="20sp" />
+
+</RelativeLayout>

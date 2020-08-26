@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorSettings">#9daca4</color>
+    <color name="colorDivider">#929292</color>
+    <color name="colorGrey">#cccccc</color>
+    <color name="colorWhiteTransparent">#80ffffff</color>
+    <color name="colorWhiteTransparent2">#ccffffff</color>
+    <color name="colorBlackTransparent">#B3000000</color>
+    <color name="colorBlackTransparent2">#40000000</color>
+    <color name="dividerColor">#c8c7cc</color>
+    <color name="iOSSettingColor">#efeff4</color>
+    <color name="iOSDialogColor">#d5d6d8</color>
+    <color name="iOSDialogColorDark">#aeb0b5</color>
+    <color name="borderColor">#a0a0a0</color>
+    <color name="iOSTextColor">#1f7ac9</color>
+</resources>
